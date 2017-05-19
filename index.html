@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <!-- ie 强制按照edge 的方式去渲染页面  微软整出来的  -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 视口属性  这里也可以添加 自己的 视口属性 比如禁用缩放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="lib/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 导入 自己的 css -->
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--emmet语法 cc:ie6-->
+    <!-- 第一个 js 是html5中新语义标签的 兼容性 -->
+    <!-- 响应式 依托于 哪个技术 媒体查询
+      respond.min.js 解决 低版本ie中 的 媒体查询兼容性问题
+      使用默认的 cdn服务即可
+      商业网站 上线以后 一定是互联网环境
+   -->
+
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!--顶部通栏-->
+    <div class="contanier-fluid wjs-header hidden-md hidden-sm hidden-xs">
+        <div class="row">
+            <div class="col-md-2">
+                <a href="#">
+                    <span class="glyphicon glyphicon-phone"></span>
+                    <p>手机微金所</p>
+                    <span class="glyphicon glyphicon-menu-down"></span>
+                </a>
+            </div>
+            <div class="col-md-5">
+                <a href="#">
+                    <span class="glyphicon glyphicon-phone-alt"></span> &nbsp;4006-89-4006（服务时间：9:00-21:00)
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a href="#">常见问题</a>&nbsp;&nbsp;
+                <a href="#">问题找我</a>
+            </div>
+            <div class="col-md-3 first">
+                <a href="#" class="btn btn-danger">常见问题</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#">登录</a>
+            </div>
+        </div>
+    </div>
+    <!--导航栏-->
+    <nav class="navbar navbar-default wjs-nav">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="#">
+                    <span class=" wjsfont wjsfont-logo"></span>
+                    <span class="wjsfont wjsfont-name"></span>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">嫣然一笑 <span class="sr-only">(current)</span></a></li>
+                    <li>
+                        <a href="#">倾国倾城</a></li>
+                    <li><a href="#">百舸争流</a></li>
+                    <li><a href="#">百舸争流</a></li>
+                    <li><a href="#">浪遏飞</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">个人中心</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!--响应式轮播图-->
+    <div class="container-fluid wjs-scroll">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <a class="bg1 hidden-xs" href="#">1</a>
+                    <a href="#" class="hidden-sm hidden-md hidden-lg">
+                        <img src="images/slide_01_640x340.jpg" alt="">
+                    </a>
+                </div>
+                <div class="item">
+                    <a class="bg2 hidden-xs" href="#"></a>
+                    <a href="#" class="hidden-sm hidden-md hidden-lg">
+                        <img src="images/slide_02_640x340.jpg" alt="">
+                    </a>
+                </div>
+                <div class="item">
+                    <a class="bg3 hidden-xs" href="#"></a>
+                    <a href="#" class="hidden-sm hidden-md hidden-lg">
+                        <img src="images/slide_03_640x340.jpg" alt="">
+                    </a>
+                </div>
+                <div class="item">
+                    <a class="bg4 hidden-xs" href="#"></a>
+                    <a href="#" class="hidden-sm hidden-md hidden-lg">
+                        <img src="images/slide_04_640x340.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <!--服务区域-->
+    <div class="container wjs-service hidden-xs">
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <a href="#">
+                    <div class="media">
+                        <div class="media-left">
+
+                            <span class="wjsfont wjsfont-e901"></span>
+
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">支付交易保障</h4>
+                            银联支付全程保证安全
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="#">
+                    <div class="media">
+                        <div class="media-left">
+
+                            <span class="wjsfont wjsfont-e901"></span>
+
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">支付交易保障</h4>
+                            银联支付全程保证安全
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="#">
+                    <div class="media">
+                        <div class="media-left">
+
+                            <span class="wjsfont wjsfont-e901"></span>
+
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">支付交易保障</h4>
+                            银联支付全程保证安全
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="#">
+                    <div class="media">
+                        <div class="media-left">
+
+                            <span class="wjsfont wjsfont-e901"></span>
+
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">支付交易保障</h4>
+                            银联支付全程保证安全
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="#">
+                    <div class="media">
+                        <div class="media-left">
+
+                            <span class="wjsfont wjsfont-e901"></span>
+
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">支付交易保障</h4>
+                            银联支付全程保证安全
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="#">
+                    <div class="media">
+                        <div class="media-left">
+
+                            <span class="wjsfont wjsfont-e901"></span>
+
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">支付交易保障</h4>
+                            银联支付全程保证安全
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <!--预约区域-->
+    <div class="container-fluid wjs-book">
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="book-left pull-left">
+                    <span class='glyphicon glyphicon-time'></span>现在有 273 人在排队，累计预约交易成功 7571 次。 什么是预约投标？
+                    <a href="#">立即预约</a>
+                </p>
+                <a href="#" class="book-right pull-right hidden-sm hidden-xs">
+                    <span class='glyphicon glyphicon-camera '></span> 微金所宣传片
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--优惠区域-->
+    <div class="container-fluid wjs-ticket-container">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">特别推荐</a></li>
+            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">微投资</a></li>
+            <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">微博见</a></li>
+            <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">走一遭</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="home">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <a href="#" class="wjs-ticket red wjsfont wjsfont-e915">
+                                <div class="ticket-right">
+                                    <p>8%</p>
+                                    <p>年利率</p>
+                                </div>
+                                <div class="ticket-left">
+                                    <h4>新手体验标1012期</h4>
+                                    <div class="left-content">
+                                        <div class="content-left pull-left">
+                                            <p>起投金额</p>
+                                            <p>0.01w</p>
+                                            <p>借款期限</p>
+                                            <p>10天</p>
+                                        </div>
+                                        <div class="content-right pull-right">
+                                            <p>已投标人数</p>
+                                            <p>22人</p>
+                                            <p>已投标金额</p>
+                                            <p>1个亿</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-sm-6 baobei">
+                            <a href="#" class="wjs-ticket">
+                                <div class="ticket-right">
+                                    <p><span data-toggle="tooltip" data-placement="top" title="我是宝宝">宝</span>&nbsp;<span data-toggle="tooltip" data-placement="top" title="我是贝贝">贝</span></p>
+                                    <p><span>8</span>%</p>
+                                    <p>年利率</p>
+                                </div>
+                                <div class="ticket-left">
+                                    <h4>新手体验标1012期</h4>
+                                    <div class="left-content">
+                                        <div class="content-left pull-left">
+                                            <p>起投金额</p>
+                                            <p>0.01w</p>
+                                            <p>借款期限</p>
+                                            <p>10天</p>
+
+                                        </div>
+                                        <div class="content-right pull-right">
+                                            <p>已投标人数</p>
+                                            <p>22人</p>
+                                            <p>已投标金额</p>
+                                            <p>1个亿</p>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                    60%
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <a href="#" class="wjs-ticket">
+                                <div class="ticket-right">
+                                    <p>8%</p>
+                                    <p>年利率</p>
+                                </div>
+                                <div class="ticket-left">
+                                    <h4>新手体验标1012期</h4>
+                                    <div class="left-content">
+                                        <div class="content-left pull-left">
+                                            <p>起投金额</p>
+                                            <p>0.01w</p>
+                                            <p>借款期限</p>
+                                            <p>10天</p>
+                                        </div>
+                                        <div class="content-right pull-right">
+                                            <p>已投标人数</p>
+                                            <p>22人</p>
+                                            <p>已投标金额</p>
+                                            <p>1个亿</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <a href="#" class="wjs-ticket">
+                                <div class="ticket-right">
+                                    <p>8%</p>
+                                    <p>年利率</p>
+                                </div>
+                                <div class="ticket-left">
+                                    <h4>新手体验标1012期</h4>
+                                    <div class="left-content">
+                                        <div class="content-left pull-left">
+                                            <p>起投金额</p>
+                                            <p>0.01w</p>
+                                            <p>借款期限</p>
+                                            <p>10天</p>
+                                        </div>
+                                        <div class="content-right pull-right">
+                                            <p>已投标人数</p>
+                                            <p>22人</p>
+                                            <p>已投标金额</p>
+                                            <p>1个亿</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <a href="#" class="wjs-ticket">
+                                <div class="ticket-right">
+                                    <p>8%</p>
+                                    <p>年利率</p>
+                                </div>
+                                <div class="ticket-left">
+                                    <h4>新手体验标1012期</h4>
+                                    <div class="left-content">
+                                        <div class="content-left pull-left">
+                                            <p>起投金额</p>
+                                            <p>0.01w</p>
+                                            <p>借款期限</p>
+                                            <p>10天</p>
+                                        </div>
+                                        <div class="content-right pull-right">
+                                            <p>已投标人数</p>
+                                            <p>22人</p>
+                                            <p>已投标金额</p>
+                                            <p>1个亿</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="profile">1</div>
+            <div role="tabpanel" class="tab-pane" id="messages">2</div>
+            <div role="tabpanel" class="tab-pane" id="settings">3</div>
+        </div>
+
+    </div>
+    <!--新闻链接-->
+    <div class="container-fluid wjs-news">
+        <div class="row">
+            <div class="col-md-2 col-md-offset-3">
+                <h3>全部新闻</h3>
+            </div>
+            <div class="col-md-2">
+                <div class="wjs-line hidden-xs"></div>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a class="wjsfont wjsfont-new01" href="#news1" aria-controls="home" role="tab" data-toggle="tab"></a>
+                    </li>
+                    <li role="presentation">
+                        <a class="wjsfont wjsfont-new02" href="#news2" aria-controls="profile" role="tab" data-toggle="tab"></a>
+                    </li>
+                    <li role="presentation">
+                        <a class="wjsfont wjsfont-new03" href="#news3" aria-controls="messages" role="tab" data-toggle="tab"></a>
+                    </li>
+                    <li role="presentation">
+                        <a class="wjsfont wjsfont-new04" href="#news4" aria-controls="settings" role="tab" data-toggle="tab"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-5">
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="news1">
+                        <ul>
+                            <li><a href="javascript:;"><span class="hidden-xs">2017-4-8</span>【微还款】一周还款公告2016年1月18日-1月24日</a></li>
+                            <li><a href="javascript:;"><span class="hidden-xs">2017-4-8</span>【微还款】一周还款公告2016年1月18日-1月24日</a></li>
+                            <li><a href="javascript:;"><span class="hidden-xs">2017-4-8</span>【微还款】一周还款公告2016年1月18日-1月24日</a></li>
+                            <li><a href="javascript:;"><span class="hidden-xs">2017-4-8</span>【微还款】一周还款公告2016年1月18日-1月24日</a></li>
+                            <li><a href="javascript:;"><span class="hidden-xs">2017-4-8</span>【微还款】一周还款公告2016年1月18日-1月24日</a></li>
+                            <li><a href="javascript:;"><span class="hidden-xs">2017-4-8</span>【微还款】一周还款公告2016年1月18日-1月24日</a></li>
+                            <li><a href="javascript:;"><span class="hidden-xs">2017-4-8</span>【微还款】一周还款公告2016年1月18日-1月24日</a></li>
+                            <li><a href="javascript:;"><span class="hidden-xs">2017-4-8</span>【微还款】一周还款公告2016年1月18日-1月24日</a></li>
+                            <li><a href="javascript:;"><span class="hidden-xs">2017-4-8</span>【微还款】一周还款公告2016年1月18日-1月24日</a></li>
+                            <li><a href="javascript:;"><span class="hidden-xs">2017-4-8</span>【微还款】一周还款公告2016年1月18日-1月24日</a></li>
+                        </ul>
+                        <!--ul>li*10>a[href='javascript:void(0)']{<span class="hidden-xs">2016-9-19</span> 【微还款】一周还款公告2016年1月18日-1月24日}-->
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="news2">2</div>
+                    <div role="tabpanel" class="tab-pane" id="news3">3</div>
+                    <div role="tabpanel" class="tab-pane" id="news4">4</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--友情链接-->
+    <div class="wjs-footer container-fluid">
+        <!--ul.clearfix>li.pull-left*9>a.wjsfont.wjsfont-partner0$[href='javascript:void(0)']-->
+        <h3>和他们合作过</h3>
+        <ul class="clearfix">
+            <li class="pull-left">
+                <a href="javascript:;" class="wjsfont wjsfont-partner01"></a>
+            </li>
+            <li class="pull-left">
+                <a href="javascript:;" class="wjsfont wjsfont-partner02"></a>
+            </li>
+            <li class="pull-left">
+                <a href="javascript:;" class="wjsfont wjsfont-partner03"></a>
+            </li>
+            <li class="pull-left">
+                <a href="javascript:;" class="wjsfont wjsfont-partner04"></a>
+            </li>
+            <li class="pull-left">
+                <a href="javascript:;" class="wjsfont wjsfont-partner05"></a>
+            </li>
+            <li class="pull-left">
+                <a href="javascript:;" class="wjsfont wjsfont-partner06"></a>
+            </li>
+            <li class="pull-left">
+                <a href="javascript:;" class="wjsfont wjsfont-partner07"></a>
+            </li>
+            <li class="pull-left">
+                <a href="javascript:;" class="wjsfont wjsfont-partner08"></a>
+            </li>
+            <li class="pull-left">
+                <a href="javascript:;" class="wjsfont wjsfont-partner09"></a>
+            </li>
+        </ul>
+    </div>
+
+
+
+</body>
+
+</html>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!-- Bootstrap 依托于 jQuery -->
+<!--<script src="lib/js/jquery-1.12.4.min.js"></script>-->
+<script src="lib/js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="lib/js/bootstrap.min.js"></script>
+<script>
+    $(function() {
+        $('[data-toggle="tooltip"]').tooltip({
+            animation: false,
+            delay: {
+                "show": 500,
+                "hide": 100
+            }
+        });
+
+    })
+</script>
